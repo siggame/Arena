@@ -25,6 +25,7 @@ protocols:
 	icmp
 
 Now, there is a default Compute Engine API service account.
+
 9. Create a key for it as a JSON. Save this in the secrets folder.
 10. Create main.tf, replacing the project name with your own.
 11. The resource google_compute_instance default should work.

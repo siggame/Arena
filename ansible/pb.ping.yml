@@ -1,0 +1,8 @@
+---
+- name: Ping
+  hosts: localhost
+  gather_facts: no
+  connection: local
+
+  roles:
+    - role: arena

@@ -39,3 +39,11 @@ Ansible Piece:
 Assuming you have pip installed...
 5. pip install ansible 
 6. 
+
+
+Continued...
+I added the output variable to terraform. Now I am seeing how to osLogin
+I gave the service account the osloginadmin role
+https://cloud.google.com/compute/docs/instances/connecting-advanced#thirdpartytools
+Following that tutorial...
+Get the external IP

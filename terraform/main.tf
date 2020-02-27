@@ -43,3 +43,8 @@ resource "google_compute_instance" "default" {
       enable-oslogin="true"
   }
 }
+
+# Output IP Addresses
+output "ip_addresses" {
+  value = "${google_compute_instance.default.*.network_interface.0.access_config.0.nat_ip}"
+}

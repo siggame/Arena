@@ -8,6 +8,8 @@ VM_COUNT=3
 # Build infrastructure
 cd terraform
 
+terraform init
+
 bash build_instances.sh $VM_COUNT
 
 cd ..

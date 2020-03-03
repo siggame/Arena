@@ -4,7 +4,7 @@
 
 STATE="../secrets/terraform.tfstate"
 OUTPUT="../secrets/ip_addresses.json"
-INV="../ansible/inventory"
+INV="../secrets/inventory"
 
 # Puts a list of strings containing IP addresses in $OUTPUT
 terraform output -state=$STATE -json ip_addresses > $OUTPUT

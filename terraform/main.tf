@@ -22,25 +22,25 @@ resource "google_compute_instance" "default" {
 
   tags = ["arena", "worker"]
   labels = {
-      "ansible": "true"
+    "ansible": "true"
   }
 
   boot_disk {
-      initialize_params {
-          image = "ubuntu-os-cloud/ubuntu-1804-lts"
-          size = 20
-      }
+    initialize_params {
+        image = "ubuntu-os-cloud/ubuntu-1804-lts"
+        size = 20
+    }
   }
 
   network_interface {
-      network = "default"
-      access_config {
-      }
+    network = "default"
+    access_config {
+    }
   }
 
   # Enable SSH for Ansible
   metadata = {
-      enable-oslogin="true"
+    ssh-keys = file("../secrets/ansible.pub")
   }
 }
 

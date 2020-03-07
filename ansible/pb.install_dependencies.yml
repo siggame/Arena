@@ -1,3 +1,8 @@
 ---
 - name: Install Dependencies
-  hosts: 
+  hosts: workers
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: arena-worker

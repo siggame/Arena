@@ -11,7 +11,7 @@ terraform output -state=$STATE -json ip_addresses > $OUTPUT
 
 # Format $OUTPUT into valid ansible inventory format
 
-echo "[arena-workers]" > $INV
+echo "[workers]" > $INV
 
 while IFS= read -n1 p;do
   if [[ "$p" =~ [0-9] ]] || [[ "$p" == "." ]]; then

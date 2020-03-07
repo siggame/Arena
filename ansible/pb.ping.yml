@@ -1,8 +1,8 @@
 ---
 - name: Ping
-  hosts: localhost
+  hosts: workers
   gather_facts: no
   connection: local
 
   roles:
-    - role: arena
+    - role: ping

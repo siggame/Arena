@@ -10,11 +10,19 @@ cd terraform
 
 terraform init
 
-bash build_instances.sh $VM_COUNT
+./build_instances.sh $VM_COUNT
+
+./output_addresses.sh
 
 cd ..
 
 # Install dependencies
+
+cd ansible
+
+ansible-playbook pb.install_dependencies.yml
+
+cd ..
 
 # Run tournament
 
@@ -23,4 +31,4 @@ cd ..
 # Teardown infrastructure
 cd terraform
 
-bash destroy_instances.sh $VM_COUNT
+# bash destroy_instances.sh $VM_COUNT

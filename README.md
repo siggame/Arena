@@ -47,3 +47,10 @@ I gave the service account the osloginadmin role
 https://cloud.google.com/compute/docs/instances/connecting-advanced#thirdpartytools
 Following that tutorial...
 Get the external IP
+
+Okay so I believe that OSLogin will not work for us - it says you need an org account which idk if we wanna rely on.
+I have disabled OS Login and know that to make ssh keys work, you need to give them to the instances
+SO now main.tf does that, and we use our ansible ssh key to connect
+However, you also need to provide the public key to Compute Engine -> Metadata -> SSH Keys
+You SSH by doing ssh ansible@IP -i secrets/ansible
+ansible config has host key checking off because these vms are getting made and destroyed and so dont pass checks all the time.

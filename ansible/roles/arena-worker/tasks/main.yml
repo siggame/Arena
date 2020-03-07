@@ -1,0 +1,11 @@
+---
+- name: Update
+  apt:
+    update_cache: yes
+    name:
+      - tmux
+      - python3-psycopg2
+      - docker.io
+    state: present
+
+

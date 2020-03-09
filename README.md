@@ -12,7 +12,8 @@ This should already be done, but if not, here are the steps:
 6. Click Create Credentials at the top right
 7. Compute Engine API, Yes
 Manually create the firewall rules, so terraform doesn't destroy them.
-VPC→Firewall
+
+Go to navigation menu, VPC network → Firewall rules
 
 New Rule
 
@@ -34,7 +35,8 @@ protocols:
 
 Now, there is a default Compute Engine API service account.
 
-9. Create a key for it as a JSON. Save this in the secrets folder.
+9. Create a key for it as a JSON. Save this in the secrets folder. 
+Go to navigation menu, IAM & Admin → Service Account → actions → create new key → save as JSON
 10. Create main.tf, replacing the project name with your own.
 11. The resource google_compute_instance default should work.
 

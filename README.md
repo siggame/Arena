@@ -15,13 +15,21 @@ Manually create the firewall rules, so terraform doesn't destroy them.
 VPC→Firewall
 
 New Rule
+
 name: allow-webservices
+
 network: default
+
 target tags: allow-webservices
+
 allow
+
 source filters: ip ranges: 0.0.0.0/0
+
 protocols:
+
 	tcp: 80, 443, 8080, 8000
+	
 	icmp
 
 Now, there is a default Compute Engine API service account.

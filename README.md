@@ -117,7 +117,7 @@ sudo groupadd docker
 sudo usermod -a -G docker $USER
 
 4. Setup the gameserver
-
+```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 *new shell*
 nvm install 9.11
@@ -129,13 +129,13 @@ line 900, replace fn: BLABLABLA with fn: Function
 echo '#!/bin/sh' > run_gameserver
 echo npm run start -- --arena --visualizer-url=http://vis.codegames.ai --only-load blobmaster >> run_gameserver
 chmod +x run_gameserver
-
+```
 5. Start the gameserver
-
+```
 ./run_gameserver
-
+```
 5. Create a run file for pyrena, something similar to:
-
+```
 #!/bin/sh
 export LOOKBACK_SECONDS=60
 export GAME_NAME=Chess
@@ -153,7 +153,7 @@ export RUN_FOREVER=True
 export CONTAINER_CPU=1
 export CONTAINER_RAM=1g
 python3 pyrena.py
-
+```
 6. Test the pyrena by running it with RUN_FOREVER=False
 Pyrena will:
 
@@ -183,7 +183,7 @@ Pyrena will repeat the above steps until until a fatal error, such as the disk f
 
 Mark all teams you want in the tournament as eligible.
 The tournament schedule will use the latest submitted version for each team.
-
+```
 GAME_NAME=Chess \
 DB_HOST=\
 DB_PORT=\
@@ -193,3 +193,4 @@ DB_PASS=\
 N_ELIMINATION=3\
 BEST_OF=7\
 python3 tournament_scheduler.py
+```

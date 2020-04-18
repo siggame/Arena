@@ -86,12 +86,7 @@ Before using this arena, you must do the following:
 
 COMPONENTS:
 
-                                                    ____ Gameserver (Cerveau)
-                                                   /
-tournament_scheduler _                 _________pyrena________
-                      \ PostgreSQL DB /                       \ droopygz (large file storage)
-webserver backend ____/               \____client web app_____/
-               \______________________________/
+
 
 Tournament_scheduler : Schedules games for N-elimination tournaments in the BD
 Webserver backend    : Serves API used by client web app

@@ -135,16 +135,17 @@ chmod +x run_gameserver
 ./run_gameserver
 ```
 5. Create a run file for pyrena, something similar to:
+You will need to fill in the DB_HOST. This will be the database IP that will have the competitors names in it.
 ```
 #!/bin/sh
 export LOOKBACK_SECONDS=60
-export GAME_NAME=Chess
+export GAME_NAME='Type name here'
 export MATCH_TIMEOUT=280
 export DOCKERFILE_PATH=/home/coolcat/joueur
 export DB_NAME=postgres
 export DB_USER=ophelia
-export DB_PASS='blablabla'
-export DB_HOST=123.123.123.123
+export DB_PASS=postgres
+export DB_HOST='Ask web team. This will be an IP'
 export DROOPY_URL=http://drop.megaminerai.games/
 export LOGFILE_PATH=/home/coolcat/pyrena_logs
 export SUBMISSION_CACHE_PATH=/home/coolcat/submission_cache
